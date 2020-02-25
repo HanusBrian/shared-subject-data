@@ -1,0 +1,16 @@
+<h1>Welcome to Brian's Tacos</h1>
+<div>
+	<h3>Specials</h3>
+	<ng-container *ngFor="let taco of tacoDisplayList">
+		<div class="card">
+			<div class="card-header">
+				{{ taco.name }}
+			</div>
+			<div class="card-body">
+				<p class="card-text">{{ taco.description }}</p>
+				<p class="card-text">{{ taco.price | currency }}</p>
+			</div>
+		</div>
+
+	</ng-container>
+</div>

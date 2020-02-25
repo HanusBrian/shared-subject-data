@@ -1,0 +1,20 @@
+<h2>Admin Product Controls</h2>
+
+<form [formGroup]="displayTacoList">
+  <div formArrayName="formArray" *ngFor="let taco of formArray.controls; let i = index">
+    <ng-container [formGroupName]="i">
+      <div class="card">
+        <div class="card-header">
+          {{ taco.value.name }}
+        </div>
+        <div class="card-body">
+          <label>Name: </label> <input type="text" class="form-control" formControlName="name" />
+          <label>Description: </label> <input type="text" class="form-control" formControlName="description" />
+          <label>Price: </label> <input type="number" class="form-control" formControlName="price" />
+          <label>Special: </label> <input type="checkbox" class="form-control" formControlName="isSpecial" />
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <button class="btn btn-primary fixed-bottom" (click)="saveChanges()">Save Changes</button>
+</form>

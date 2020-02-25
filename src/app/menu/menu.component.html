@@ -1,0 +1,8 @@
+<h2>Menu</h2>
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let taco of displayTacoList">
+    <div>{{ taco.name }}</div>
+    <div>{{ taco.description }}</div>
+    <div>{{ taco.price | currency }}</div>
+  </li>
+</ul>
